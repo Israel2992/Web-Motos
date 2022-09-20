@@ -9,141 +9,459 @@ html{
     font-size: 62.5%;
 }
 
-.headerContainer{
+.container {
+	width: 100%;
+    height: 100%;
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	grid-template-rows: repeat(7, auto) ; 
+	grid-template-areas: 
+	"header header header"
+    "marcas marcas marcas"
+    "moto1 moto2 moto3"
+    "moto4 moto5 moto6"
+    "nosotros text text"
+    "video video video"
+    "titulo contactos logo";
+}
+
+.header {
+    grid-area: header;
     width: 100vw;
-    height: 722px;
+    height: 100vh;
     background: no-repeat;
-    background-image: url(./IMG\ MOTOS/1.fondo_index_header.jpg);
+    background-image: url(./img_fotos/1.fondo_index_header.jpg);
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
-    
 }
 
-.headerTitle{
-    color: #F27405;
-    font-size: 7rem;
-    margin: 5rem 0rem 0rem 5rem;
+.header__nav{
+    width: 100vw;
+    margin-top: 3rem;
 }
 
-.headerNav{
-    margin: 3rem;
-}
-
-.headerNav ul{
+.header__nav ul{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
     list-style: none;
-    
 }
 
-.headerNav li {
+.header__nav li {
     background-color: #F25C05;
     border:#F25C05 solid 1rem;
     border-radius: 2rem 10rem 15rem;
     opacity: 0.6;
 }
 
-.headerNav li:hover{
+.header__nav li:hover{
     opacity: 1;
 }
 
-.headerNav a{
+.header__nav a{
     text-decoration: none;
     font-size: 2.5rem;
     color: white;
     font-weight: 900;  
 }
 
-/*---------------------------------------------------------------*/
+.header__title{
+    color: #F27405;
+    font-size: 7rem;
+    margin: 5rem 0rem 0rem 5rem;
+}
 
-.mainContainer{
-    border: solid red 0rem;
+.marcas { 
     width: 100vw;
-    height: 722px;
+    height: 20vh;
+    background-color: black; 
+    grid-area: marcas;
     display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
+    align-items: center;
+    text-align: center;
 }
 
-.mainTitle{
-    background-color: black;
-}
-.mainTitle h1{
+.marcas h1{
     width: 100%;
-    height: 20%;
     font-size: 5rem;
     color: #F25C05;
     text-align: center;
     margin: 3rem;
 }
-.mainFila1, .mainFila2{
-    width: 100%;
-    height: 40%;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    align-items: center;
-    
+
+.moto1, .moto2, .moto3, .moto4, .moto5, .moto6  { 
+    grid-area: moto1;
+    justify-self: center;
+    align-self: center;
 }
 
-.mainFila1 img, .mainFila2 img{
+.moto2 { 
+    grid-area: moto2;
+}
+
+.moto3 { 
+    grid-area: moto3; 
+}
+
+.moto4 { 
+    grid-area: moto4;
+}
+
+.moto5 { 
+    grid-area: moto5;
+}
+
+.moto6 { 
+    grid-area: moto6; 
+}
+
+.img_marca{
     width: 25rem;
-    margin: 3rem;
+    margin: 3rem; 
 }
 
-
-.mainFila1 img:hover, .mainFila2 img:hover{
+.img_marca:hover{
     opacity: 0.7;
-    background-color: rgba(0, 0, 0, 0);
     border: solid black 1.5rem;
     border-radius: 2rem;
 }
 
-/*--------------------------------------------------------------*/
-.footerContainer{
-    width: 100%;
-    height: 722px;
-}
-
-.footerNosotros{
-    height: 20%;
-    background-color:#F29F05 ;
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-}
-
-.footerNosotros h1, .footerNosotros p{
-    padding: 0 2rem 0 2rem;
-    margin: auto;
-}
-
-.footerNosotros-title{
-    width: 30%;
-    text-align: center;
+.nosotros{
+    height: 20vh;
+    grid-area: nosotros; 
     background-color: black;
     display: flex;
     align-items: center;
+    text-align: center;
 }
 
-.footerNosotros h1{
-    font-size: 7rem;
-    color: white;
+.nosotros h1{
+    width: 100%;
+    font-size: 5rem;
+    color: #F27405;
+  
 }
 
-.footerNosotros p{
-    width: 70%;
-    font-size: 2rem;
+
+.text { 
+    background-color: #F27405;
+    grid-area: text;
+    height: 20vh;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    font-size: 1.5rem;
 }
 
-.footerVideo{
-    height: 60%;
+.text p{
+    padding: 1rem;
+}
+
+.video { 
+    grid-area: video;
+    height: 60vh;
     display: flex;
     justify-content: center;
     align-items: center;
 }
+
+.titulo { 
+    background-color: #F27405;
+    grid-area: titulo;
+    height: 20vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 5rem
+}
+
+.contactos { 
+    grid-area: contactos;
+    background-color: #F27405;
+    height: 20vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    line-height: 1.6;
+    
+}
+
+.logo { 
+    background-color: #F27405;
+    grid-area: logo;
+    height: 20vh;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.logo img{ 
+    width: 8rem;
+    height: 8rem;
+    border: #F27405 solid 1rem;
+    border-radius: 2rem;
+}
+
+@media screen and (max-width: 768px) {
+	.container {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		grid-template-rows: repeat(10, auto);
+		grid-template-areas: 
+		"header header"
+        "marcas marcas"
+        "moto1 moto2" 
+        "moto4 moto3"
+        "moto5 moto6"
+        "nosotros nosotros"
+        "text text"
+        "video video"
+        "titulo titulo"
+        "contactos logo";
+	}
+
+    .header__nav{
+        width: 100vw;
+        margin-top: 3rem;
+        padding: 1rem;
+    }
+
+    .header {
+        grid-area: header;
+        width: 100vw;
+        height: 35vh;
+        background-image: url(./img_fotos/1.fondo_index_header_px_768.jpg);
+    }
+
+
+    .header__nav a{
+        font-size: 1rem;  
+    }
+
+    .header__title{
+        font-size: 3rem;
+        margin: 3rem 0rem 0rem 3rem;
+    }
+
+    .marcas { 
+        height: 8vh;
+    }
+
+    .marcas h1{
+        font-size: 3rem;
+        margin: 2rem;
+    }
+
+    .img_marca{
+        width: 10rem;
+        margin: 1rem; 
+    }
+
+    .img_marca:hover{
+        opacity: 0.7;
+        border: solid black 0.3rem;
+        border-radius: 2rem;
+    }
+
+    .nosotros{
+        height: 8vh;
+    }
+    
+    .nosotros h1{
+        font-size: 3rem;
+    }
+
+    .text { 
+        height: 13vh;
+        width: 100vw;
+        font-size: 1rem;
+    }
+
+    .text p{
+        padding: 1rem;
+    }
+
+    .video { 
+        height: 40vh;
+    }
+
+    .video iframe{
+        height: 80%;
+        width: 40%;
+    }
+
+    .titulo {
+        height: 4vh;
+        background-color: black;
+        color: #F27405;
+        font-size: 2rem
+    }
+
+    
+    .contactos { 
+        height: 10vh;
+        font-size: 2rem;
+        line-height: 1.6;
+    }
+
+        
+    .contactos { 
+        height: 10vh;
+        font-size: 0.8rem;
+        line-height: 1.6;
+    }
+
+    .logo { 
+        height: 10vh;
+    }
+
+    .logo img{ 
+        width: 6rem;
+        height: 6rem;
+      
+    }
+}
+
+
+@media screen and (max-width: 420px) {
+	.container {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		grid-template-rows: repeat(10, auto);
+		grid-template-areas: 
+		"header header"
+        "marcas marcas"
+        "moto1 moto2" 
+        "moto4 moto3"
+        "moto5 moto6"
+        "nosotros nosotros"
+        "text text"
+        "video video"
+        "titulo titulo"
+        "contactos logo";
+	}
+
+    .header {
+        grid-area: header;
+        width: 100vw;
+        height: 20vh;
+        background: no-repeat;
+        background-image: url(./img_fotos/1.fondo_index_header_px_420.jpg);
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+    }
+    
+    .header__nav{
+        width: 100vw;
+        margin-top: 0.5rem;
+    }
+
+    
+    .header__nav li {
+        border:#F25C05 solid 0.3rem;
+        border-radius: 2rem 10rem 15rem;
+    }
+    
+    
+    .header__nav a{ 
+        font-size: 0.7rem;
+    }
+    
+    .header__title{
+        font-size: 2rem;
+        text-align: center;
+    }
+
+    .marcas { 
+        height: 5vh;
+    }
+
+    .marcas h1{
+        font-size: 1.5rem;
+        
+    }
+
+    .img_marca{
+        width: 6rem;
+        margin: 1rem; 
+    }
+
+    .img_marca:hover{
+        opacity: 0.7;
+        border: solid black 0.3rem;
+        border-radius: 2rem;
+    }
+
+    .nosotros{
+        height: 5vh;
+    }
+    
+    .nosotros h1{
+        font-size: 2rem;
+    }
+
+    .text { 
+        height: 10vh;
+        font-size: 0.8rem;
+    }
+
+    .text p{
+        padding: 1rem;
+    }
+
+    .video { 
+        height: 25vh;
+    }
+
+    .video iframe{
+        height: 80%;
+        width: 40%;
+    }
+
+    .titulo {
+        height: 2vh;
+        background-color: black;
+        color: #F27405;
+        font-size: 1rem
+    }
+
+    
+    .contactos { 
+        height: 10vh;
+        font-size: 2rem;
+        line-height: 1.6;
+    }
+
+        
+    .contactos { 
+        height: 5vh;
+        font-size: 0.5rem;
+        line-height: 1.6;
+    }
+
+    .logo { 
+        height: 5vh;
+    }
+
+    .logo img{ 
+        width: 2rem;
+        height: 2rem;
+    }
+}
+
+
+
+
+
+/*---------------------------------------------------------------*/
+
+
+/*--------------------------------------------------------------*/
+/*
 
 
 
@@ -191,9 +509,10 @@ html{
 
 /*----------------------------------------------------*/
 
+/*
 .headerCustomized{
     width: 100vw;
-    height: 25vh;
+    height: 40vh;
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
@@ -280,10 +599,10 @@ html{
 }
 
 /*--------------------------------------------*/
-
+/*
 .headerServicio{
     width: 100vw;
-    height: 25vh;
+    height: 40vh;
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
@@ -368,10 +687,10 @@ html{
 }
 
 /*-------------------------------------------------*/
-
+/*
 .headerTienda{
     width: 100vw;
-    height: 25vh;
+    height: 40vh;
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
@@ -426,3 +745,4 @@ html{
     width: 25rem;
     margin: 4rem;
 }
+
