@@ -5,8 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Customized</title>
-    <link rel="stylesheet" href="./style2.css">
     <link href="https://fonts.googleapis.com/css2?family=Arvo:ital,wght@1,400;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./../css/bootstrap.min.css">
+    <link rel="stylesheet" href="./../style.css">
+    
 </head>
 <body>
 
@@ -31,35 +33,40 @@
             <section class="mainCustomized-formulario-title">
                 <h1>Formulario de contacto</h1>
             </section>
-            
-            <form action="">
-                <div>
-                    <label for="nombre"> Nombre Completo</label>      
-                    <br>              
-                    <input type="text" id="nombre" placeholder="nombre completo"> 
+
+            <form>
+                <div class="mb-3">
+                  <label for="exampleInputEmail1" class="form-label">Nombre Completo</label>
+                  <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                </div>
+
+                <div class="mb-3">
+                  <label for="exampleInputPassword1" class="form-label">Número de Contacto</label>
+                  <input type="password" class="form-control" id="exampleInputPassword1">
+                </div>
+
+                <div class="mb-3">
+                    <label for="exampleInputPassword1" class="form-label">Email</label>
+                    <input type="password" class="form-control" id="exampleInputPassword1">
+                </div>
+
+                <div class="mb-3">
+                    <label for="exampleInputPassword1" class="form-label">Descripción</label>
+                    <textarea name="descripcion" id="" cols="50" rows="5" placeholder="Coloca un drescipción de lo que tienes en mente para personalizar tu moto"></textarea>
+                </div>
+
+                <div class="mb-5 form-check">
+                  <input type="checkbox" class="form-check-input" id="exampleCheck1"></input>
+                  <label class="form-check-label" for="exampleCheck1">No eres un robot</label>
                 </div>
                 <div>
-                    <label for="numero"> Número de Contacto</label>
-                    <br>                  
-                    <input type="text" id="numero" placeholder="numero celular"> 
+                    <button type="submit" class="btn btn-primary">Submit</button>
                 </div>
-                <div>
-                    <label for="email"> Email</label>    
-                    <br>                
-                    <input type="email" id="email" placeholder="email" cols="80"> 
-                </div>
-                <div>
-                    <label for="descripcion"> Descripción</label>    
-                    <br>                
-                    <textarea name="descripcion" id="" cols="80" rows="10"></textarea>
-                </div>
-                <div>
-                    <input type="submit" value="Enviar">
-                </div>
+                
             </form>
+            
         </section>
      
     </main>
-
 </body>
 </html>
