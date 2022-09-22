@@ -2,7 +2,7 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    font-family: 'Arvo', serif;
+    font-family: 'Arvo', serif !important;
 }
 
 html{
@@ -10,8 +10,8 @@ html{
 }
 
 .container {
-	width: 100%;
-    height: 100%;
+	width: 100vw;
+    height: 100vh;
 	display: grid;
 	grid-template-columns: repeat(3, 1fr);
 	grid-template-rows: repeat(7, auto) ; 
@@ -117,14 +117,15 @@ html{
 }
 
 .img_marca{
-    width: 25rem;
+    width: 15rem;
     margin: 3rem; 
 }
 
 .img_marca:hover{
     opacity: 0.7;
-    border: solid black 1.5rem;
-    border-radius: 2rem;
+    border: solid black 0.5rem;
+    border-radius: 1rem;
+    transform: scale(1.4,1.4);
 }
 
 .nosotros{
@@ -201,9 +202,119 @@ html{
 .logo img{ 
     width: 8rem;
     height: 8rem;
-    border: #F27405 solid 1rem;
+    border: #F27405 solid 0.5rem;
     border-radius: 2rem;
 }
+
+/*-------------------------------------TIENDA ONLINE--------------------------------------------------*/
+
+.contenedor__tienda {  
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(7,auto);
+    grid-template-areas:
+      "header__tienda header__tienda header__tienda"
+      "cascos__title cascos__title cascos__title"
+      "casco1 casco2 casco3"
+      "chaquetas__title chaquetas__title chaquetas__title"
+      "chaqueta1 chaqueta2 chaqueta3"
+      "guantes_title guantes_title guantes_title"
+      "guantes1 guantes2 guantes3";
+  }
+  
+  .header__tienda { 
+    grid-area: header__tienda;
+    height: 30vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: #F27405;
+ }
+
+.header__tienda--title{
+    width: 25vw;
+    height: 20vh;
+    padding: 3rem;
+    font-weight: 900; 
+    
+}
+
+.header__tienda--title h1{
+    font-size: 4rem;
+    font-weight: 900;
+}
+
+.header__tienda--texto{
+    width: 80vw;
+    height: 20vh;
+    font-size: 2rem;
+}
+
+.title__tienda{
+    height: 15vh;
+    background-color: black;
+    color: #F27405;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.title__tienda h1{
+    font-size: 6rem;
+    font-weight: 900;
+}
+
+.articulos{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 5rem;
+}
+
+.articulos img{
+    width: 25rem;
+}
+
+.articulos P{
+    text-align: center;
+    padding: 2rem;
+    font-size: 2rem;
+}
+
+.articulos img:hover{
+    opacity: 0.5;
+}
+
+.cascos__title {  grid-area: cascos__title;}
+
+.casco1 { grid-area: casco1;}
+  
+.casco2 { grid-area: casco2; }
+  
+.casco3 { grid-area: casco3; }
+
+.chaquetas__title { grid-area: chaquetas__title; }
+  
+.chaqueta1 { grid-area: chaqueta1; }
+  
+.chaqueta2 { grid-area: chaqueta2; }
+  
+.chaqueta3 { grid-area: chaqueta3; }
+
+.guantes_title { grid-area: guantes_title; }
+  
+.guantes1 { grid-area: guantes1; }
+  
+.guantes2 { grid-area: guantes2; }
+  
+.guantes3 { grid-area: guantes3; }
+
+
+/*------------------------------MEDIA QUERIES----------------------------------------------------*/
 
 @media screen and (max-width: 768px) {
 	.container {
@@ -222,6 +333,7 @@ html{
         "titulo titulo"
         "contactos logo";
 	}
+
 
     .header__nav{
         width: 100vw;
@@ -321,9 +433,83 @@ html{
     .logo img{ 
         width: 6rem;
         height: 6rem;
+    }
+
+
+    .contenedor__tienda {  
+        width: 100vw;
+        height: 100vh;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(10,auto);
+        grid-template-areas:
+          "header__tienda header__tienda"
+          "cascos__title cascos__title "
+          "casco1 casco2"
+          "casco3 casco3"
+          "chaquetas__title chaquetas__title "
+          "chaqueta1 chaqueta2"
+          "chaqueta3 chaqueta3"
+          "guantes_title guantes_title"
+          "guantes1 guantes2"
+          "guantes3 guantes3";
+      }
       
+      
+    .header__tienda { 
+        height: 25vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .header__tienda--title{
+        width: 50vw;
+        height: 20%;
+        padding: 1rem;
+        font-weight: 900; 
+        
+    }
+
+    .header__tienda--title h1{
+        font-size: 4rem;
+    }
+
+    .header__tienda--texto{
+        width: 100vw;
+        height: 80%;
+        font-size: 1.5rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-justify: center;
+    }
+
+    .title__tienda{
+        height: 10vh;
+    }
+
+    .title__tienda h1{
+        font-size: 4rem;
+    }
+
+    .articulos{
+        margin: 3rem;
+    }
+
+    .articulos img{
+        width: 20rem;
+    }
+
+    .articulos p{
+        padding: 1.5rem;
+        font-size: 2rem;
     }
 }
+
+
+
 
 
 @media screen and (max-width: 420px) {
@@ -448,71 +634,113 @@ html{
     }
 
     .logo img{ 
-        width: 2rem;
-        height: 2rem;
+        width: 3rem;
+        height: 3rem;
+    }
+
+    
+    .contenedor__tienda {  
+        width: 100vw;
+        height: 100vh;
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(13,auto);
+        grid-template-areas:
+          "header__tienda"
+          "cascos__title"
+          "casco1" 
+          "casco2"
+          "casco3" 
+          "chaquetas__title"
+          "chaqueta1" 
+          "chaqueta2"
+          "chaqueta3" 
+          "guantes_title"
+          "guantes1" 
+          "guantes2"
+          "guantes3";
+      }
+      
+      
+    .header__tienda { 
+        height: 20vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .header__tienda--title{
+        display: flex;
+        justify-content: center;
+        width: 100vw;
+        height: 20%;
+        padding: 1rem;
+        font-weight: 900; 
+        
+    }
+
+    .header__tienda--title h1{
+        font-size: 2rem;
+        padding: 0.5rem;
+    }
+
+    .header__tienda--texto{
+        width: 100vw;
+        height: 80%;
+        font-size: 1rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-justify: center;
+    }
+
+    .header__tienda--texto p{
+        padding: 1rem;
+    }
+
+    .title__tienda{
+        height: 5vh;
+    }
+
+    .title__tienda h1{
+        font-size: 2rem;
+    }
+
+    .articulos{
+        margin: 2rem;
+    }
+
+    .articulos img{
+        width: 12rem;
+    }
+
+    .articulos p{
+        padding: 1.5rem;
+        font-size: 1rem;
     }
 }
 
 
-
-
-
 /*---------------------------------------------------------------*/
 
+
+  
+  
+  
 
 /*--------------------------------------------------------------*/
 /*
 
 
 
-.footerContactos{
-    height: 20%;
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-}
-
-.footerContactos-title, .footerContactos-info, .footerContactos-redes{
-    background-color: #F27405;
-    width: 33.3%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-}
-
-.footerContactos-title{
-    font-size: 5rem;
-    align-items: center;
-}
-
-.footerContactos-info{
-    font-size: 2rem;
-    align-items: flex-start;
-    padding: 2rem;
-}
-
-.footerContactos-redes{
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-evenly;
-}
-
-.footerContactos-redes img{
-    width: 8rem;
-    height: 8rem;
-    border: #F27405 solid 1rem;
-    border-radius: 2rem;
-}
-
 
 /*----------------------------------------------------*/
 
-/*
+
 .headerCustomized{
     width: 100vw;
-    height: 40vh;
+    height: 25vh;
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
@@ -543,7 +771,7 @@ html{
 
 .mainCustomized-fotos {
     width: 50%;
-    height: 90vh;
+    height: 100vh;
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
@@ -554,8 +782,8 @@ html{
 }
 
 .mainCustomized-fotos img{
-    width: 35rem;
-    margin: 1rem;
+    width: 40rem;
+    margin: 0.5rem;
     border: black solid 1rem;
     border-radius: 5rem;
 }
