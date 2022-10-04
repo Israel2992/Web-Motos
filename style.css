@@ -9,7 +9,8 @@ html{
     font-size: 62.5%;
 }
 
-.container {
+
+.principal {
 	width: 100vw;
     height: 100vh;
 	display: grid;
@@ -25,8 +26,8 @@ html{
     "titulo contactos logo";
 }
 
+
 .header {
-    grid-area: header;
     width: 100vw;
     height: 100vh;
     background: no-repeat;
@@ -37,40 +38,35 @@ html{
 }
 
 .header__nav{
-    width: 100vw;
     margin-top: 3rem;
+    background-color: #F27405;
+    opacity: 0.8;
 }
 
-.header__nav ul{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    list-style: none;
-}
 
 .header__nav li {
-    background-color: #F25C05;
-    border:#F25C05 solid 1rem;
-    border-radius: 2rem 10rem 15rem;
     opacity: 0.6;
 }
 
 .header__nav li:hover{
-    opacity: 1;
+    opacity: 1.5;
 }
 
 .header__nav a{
     text-decoration: none;
     font-size: 2.5rem;
-    color: white;
     font-weight: 900;  
 }
 
-.header__title{
+
+.header__title h1{
     color: #F27405;
-    font-size: 7rem;
+    font-size: 10rem;
     margin: 5rem 0rem 0rem 5rem;
+    font-weight: 900; 
 }
+
+
 
 .marcas { 
     width: 100vw;
@@ -88,6 +84,7 @@ html{
     color: #F25C05;
     text-align: center;
     margin: 3rem;
+    font-weight: 900;
 }
 
 .moto1, .moto2, .moto3, .moto4, .moto5, .moto6  { 
@@ -141,6 +138,7 @@ html{
     width: 100%;
     font-size: 5rem;
     color: #F27405;
+    font-weight: 900;
   
 }
 
@@ -174,8 +172,14 @@ html{
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 5rem
+   
 }
+.titulo h1{
+    font-size: 5rem;
+    font-weight: 900;
+    color: black;
+}
+
 
 .contactos { 
     grid-area: contactos;
@@ -186,8 +190,7 @@ html{
     justify-content: center;
     align-items: center;
     font-size: 1.5rem;
-    line-height: 1.6;
-    
+    line-height: 1.6; 
 }
 
 .logo { 
@@ -231,9 +234,30 @@ html{
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    background-color: #F27405;
+    background-color: black;
  }
 
+ 
+.header__nav__pages{
+    background-color: #F27405;
+}
+
+
+.header__nav__pages li {
+    opacity: 0.6;
+}
+
+.header__nav__pages li:hover{
+    opacity: 1.5;
+}
+
+.header__nav__pages a{
+    text-decoration: none;
+    font-size: 2.5rem;
+    font-weight: 900;  
+}
+
+ 
 .header__tienda--title{
     width: 25vw;
     height: 20vh;
@@ -245,18 +269,20 @@ html{
 .header__tienda--title h1{
     font-size: 4rem;
     font-weight: 900;
+    color: #F27405;
 }
 
 .header__tienda--texto{
     width: 80vw;
     height: 20vh;
     font-size: 2rem;
+    color: #F27405;
 }
 
 .title__tienda{
     height: 15vh;
-    background-color: black;
-    color: #F27405;
+    background-color: #F27405;
+    color:black;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -314,10 +340,13 @@ html{
 .guantes3 { grid-area: guantes3; }
 
 
+
+
 /*------------------------------MEDIA QUERIES----------------------------------------------------*/
 
+
 @media screen and (max-width: 768px) {
-	.container {
+	.principal {
 		display: grid;
 		grid-template-columns: repeat(2, 1fr);
 		grid-template-rows: repeat(10, auto);
@@ -513,7 +542,7 @@ html{
 
 
 @media screen and (max-width: 420px) {
-	.container {
+	.principal {
 		display: grid;
 		grid-template-columns: repeat(2, 1fr);
 		grid-template-rows: repeat(10, auto);
@@ -813,93 +842,4 @@ html{
 .mainCustomized-formulario div{
     padding: 1rem;
     font-size: 2rem;
-}
-
-
-/*-----------------------------------PAGINA SERVICIOS-----------------------------------------------------------*/
-
-.headerServicio{
-    width: 100vw;
-    height: 40vh;
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    background-color: #F27405;
-}
-
-.headerServicio-title{
-    width: 30%;
-    font-size: 3rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.headerServicio-text{
-    width: 70%;
-    font-size: 2rem;
-    display: flex;
-    align-items: center;
-    padding: 1rem;
-}
-
-.mainServicio{
-    width: 100vw;
-    height: 90vh;
-    display: flex;
-    flex-direction: row;
-}
-
-.mainServicio-opciones{
-    width: 50%;
-    font-size: 3rem;
-    background-color: black;
-    margin: 0.5rem 0 0 0;
-}
-
-.mainServicio-opciones ol{
-    padding: 5rem 2rem 2rem 10rem;
-    line-height: 2.5;
-    list-style-type:disc;
-    font-weight: bold;
-    color: white;
-}
-
-
-.mainServicio-formulario{
-    width: 50%;
-    height: 75vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-.mainServicio-formulario-title{
-    height: 20%;
-    font-size: 3rem;
-    display: flex;
-    align-items: center;
-
-}
-
-.mainServicio-formulario form{
-    width: 80%;
-    height: 80%;
-    display: flex;
-    flex-direction: column;
-}
-
-.mainServicio-formulario div{
-    padding: 1rem;
-    font-size: 2rem;
-}
-
-.mainServicio-formulario label{
-    font-weight: 400;
-}
-
-.mainServicio-formulario input{
-    width: 100%;
-    height: 3rem;
 }

@@ -12,30 +12,51 @@
     <!--fuente-->
     <link href="https://fonts.googleapis.com/css2?family=Arvo:ital,wght@1,400;1,700&display=swap" rel="stylesheet">
 
+    <!--bootstrap-->
+    <link rel="stylesheet" href="./../css/bootstrap.min.css">
+
     <!--Estilo-->
     <link rel="stylesheet" href="./style.css">
 </head>
 
 <body>
     
-    <section class="container">
-        <header class="header">
-            <nav class="header__nav">
-                <ul>
-                    <li><a href="#marcas">Marcas</a></li>
-                    <li><a href="./pages/customized.html">Customized</a></li>
-                    <li><a href="./pages/tiendaOnline.html">Tienda Online</a></li>
-                    <li><a href="./pages/servicioTecnico.html">Servicio Técnico</a></li>
-                    <li><a href="#nosotros">Nosotros</a></li>
-                    <li><a href="#contactos">Contactanos</a></li>
-                </ul>
-            </nav>
+    <header class="header">
+        <nav class="header__nav navbar navbar-expand-lg" id="nav">
+          <div class="container-fluid m-auto">
+            <button class="navbar-toggler ms-5" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse  navbar-collapse" id="navbarNav">
+              <ul class="navbar-nav mx-auto">
+                <li class="nav-item me-5">
+                  <a class="nav-link active" aria-current="page" href="#marcas">Marcas</a>
+                </li>
+                <li class="nav-item me-5">
+                  <a class="nav-link active" href="./pages/tiendaOnline.html">Tienda</a>
+                </li>
+                <li class="nav-item me-5">
+                    <a class="nav-link active" aria-current="page" href="./pages/customized.html">Customized</a>
+                </li>
+                <li class="nav-item me-5">
+                  <a class="nav-link active" href="#nosotros">Nosotros</a>
+                </li>
+                <li class="nav-item ">
+                  <a class="nav-link active" href="#contactos">Contáctanos</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
 
-            <section class="header__title">
-                <h1>X-RIDER</h1>
-            </section>
-        </header>
-    
+        <section class="header__title col-lg-6 col-md-12">
+            <h1>X-RIDER</h1>
+        </section>
+
+        
+    </header>
+
+    <section class="principal">
         <section class="marcas" id="marcas">
             <h1>Marcas de Motos</h1>
         </section>
