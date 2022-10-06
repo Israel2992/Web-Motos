@@ -1,0 +1,20 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Arvo', serif !important;
+}
+
+html{
+    font-size: 62.5%;
+}
+
+@import "main_page";
+
+@import "tienda_page";
+
+@import "customized_page";
+
+@import "media_tablet";
+
+@import "media_mobil";

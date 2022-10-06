@@ -1,0 +1,120 @@
+
+$color-primario:#F27405;
+$color-secundario: black;
+
+.contenedor__tienda {  
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(7,auto);
+    grid-template-areas:
+      "header__tienda header__tienda header__tienda"
+      "cascos__title cascos__title cascos__title"
+      "casco1 casco2 casco3"
+      "chaquetas__title chaquetas__title chaquetas__title"
+      "chaqueta1 chaqueta2 chaqueta3"
+      "guantes_title guantes_title guantes_title"
+      "guantes1 guantes2 guantes3";
+}
+
+.header__nav__pages{
+    background-color: $color-primario;
+    li {
+        opacity: 0.6;
+        &:hover{
+            opacity: 1.5;
+        }
+    }
+    a{
+        text-decoration: none;
+        font-size: 2.5rem;
+        font-weight: 900;  
+    }
+}
+
+.header__tienda { 
+    grid-area: header__tienda;
+    height: 30vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color:$color-secundario;
+
+    .header__tienda--title{
+        width: 25vw;
+        height: 20vh;
+        padding: 3rem;
+        font-weight: 900;
+        h1{
+            font-size: 4rem;
+            font-weight: 900;
+            color: $color-primario;
+        }  
+    }
+    .header__tienda--texto{
+        width: 80vw;
+        height: 20vh;
+        font-size: 2rem;
+        color: $color-primario;
+    }
+ }
+
+ 
+.title__tienda{
+    height: 15vh;
+    background-color: $color-primario;
+    color:black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    h1{
+        font-size: 6rem;
+        font-weight: 900;
+    }
+}
+
+.articulos{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 5rem;
+    img{
+        width: 25rem;
+        &:hover{
+            opacity: 0.5;
+        }
+    }
+    P{
+        text-align: center;
+        padding: 2rem;
+        font-size: 2rem;
+    }
+}
+
+
+.cascos__title {  grid-area: cascos__title;}
+
+.casco1 { grid-area: casco1;}
+  
+.casco2 { grid-area: casco2; }
+  
+.casco3 { grid-area: casco3; }
+
+.chaquetas__title { grid-area: chaquetas__title; }
+  
+.chaqueta1 { grid-area: chaqueta1; }
+  
+.chaqueta2 { grid-area: chaqueta2; }
+  
+.chaqueta3 { grid-area: chaqueta3; }
+
+.guantes_title { grid-area: guantes_title; }
+  
+.guantes1 { grid-area: guantes1; }
+  
+.guantes2 { grid-area: guantes2; }
+  
+.guantes3 { grid-area: guantes3; }

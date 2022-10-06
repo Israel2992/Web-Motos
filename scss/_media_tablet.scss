@@ -1,0 +1,261 @@
+
+$color-primario:#F27405;
+$color-secundario: black;
+
+@media screen and (max-width: 768px) {
+	.principal {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		grid-template-rows: repeat(10, auto);
+		grid-template-areas: 
+		"header header"
+        "marcas marcas"
+        "moto1 moto2" 
+        "moto3 moto4"
+        "moto5 moto6"
+        "nosotros nosotros"
+        "text text"
+        "video video"
+        "titulo titulo"
+        "contactos logo";
+	}
+
+    .header {
+        grid-area: header;
+        width: 100vw;
+        height: 35vh;
+        background-image: url(./img_fotos/1.fondo_index_header_px_768.jpg);
+        .header__nav{
+            width: 100vw;
+            margin-top: 3rem;
+        }
+        .header__title{
+            h1{
+                font-size: 3rem;
+                margin: 3rem 0rem 0rem 3rem;    
+            }
+
+        }
+    
+    }
+
+    
+
+    .principal {
+        .marcas{ 
+            height: 8vh;
+            h2{
+                font-size: 3rem;
+            }
+            
+        }
+        .img_marca{
+            width: 10rem;
+            margin: 1rem; 
+            &:hover{
+                opacity: 0.7;
+                border: solid $color-secundario 0.3rem;
+                border-radius: 2rem;
+            }
+        }
+        .nosotros{
+            height: 8vh;
+            h1{
+                font-size: 3rem;
+            }
+        }
+        .text { 
+            height: 13vh;
+            width: 100vw;
+            font-size: 1rem;
+            p{
+                padding: 1rem;
+            }
+        }
+        .video { 
+            height: 40vh;
+            iframe{
+                height: 80%;
+                width: 40%;
+            }
+        }
+        .titulo {
+            height: 7vh;
+            background-color: $color-secundario;
+            h2{
+                font-size: 2rem;
+                color: $color-primario;
+            }
+            
+        }
+        .contactos { 
+            height: 10vh;
+            h3{
+                font-size: 1rem;
+                line-height: 1.6;
+            }
+        }
+        .logo { 
+            height: 10vh;
+            img{ 
+                width: 6rem;
+                height: 6rem;
+            }
+        }
+    }
+
+
+    .contenedor__tienda {  
+        width: 100vw;
+        height: 100vh;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(10,auto);
+        grid-template-areas:
+          "header__tienda header__tienda"
+          "cascos__title cascos__title "
+          "casco1 casco2"
+          "casco3 casco3"
+          "chaquetas__title chaquetas__title "
+          "chaqueta1 chaqueta2"
+          "chaqueta3 chaqueta3"
+          "guantes_title guantes_title"
+          "guantes1 guantes2"
+          "guantes3 guantes3";
+      }
+
+    
+    .contenedor__tienda{
+        .header__tienda { 
+            height: 25vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            .header__tienda--title{
+                width: 50vw;
+                height: 20%;
+                padding: 1rem;
+                font-weight: 900;  
+                h1{
+                    font-size: 4rem;
+                } 
+            }
+            .header__tienda--texto{
+                width: 100vw;
+                height: 80%;
+                font-size: 1.1rem;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                text-justify: center;
+                padding: 6rem 4rem 2rem 4rem;
+            }
+        }
+    }
+    
+    .title__tienda{
+        height: 8vh;
+        h1{
+            font-size: 3rem;
+        }
+    
+    }
+    .articulos{
+        margin: 2rem;
+        img{
+            width: 17rem;
+        }
+        p{
+            padding: 1.5rem;
+            font-size: 2rem;
+        }
+    }
+
+    
+    .contenedor__Customized {  
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(2,auto);
+        grid-template-areas:
+        "header__Customized"
+        "main__Customized";
+    }
+
+    .header__Customized{
+        height: 50vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        .header__Customized--title{
+            width: 50vw;
+            height: 20%;
+            padding: 1rem;
+            font-weight: 900;  
+            h1{
+                font-size: 2.5rem;
+                font-weight: 900;
+                color: $color-primario;
+            
+            } 
+    }
+        .header__Customized--text{
+            width: 100vw;
+            height: 80%;
+            font-size: 1.1rem;
+            padding: 0rem 4rem 2rem 2rem;
+        }
+
+    }
+
+    .main__Customized{  
+    height: 50vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    .main__Customized--fotos{
+        width: 100vw;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        background-color: $color-primario;
+        img{
+            width: 15rem;
+            margin: 0.5rem;
+            border: $color-primario solid 1rem;
+            border-radius: 5rem;
+        }
+
+    }
+
+    .main__Customized--formulario{
+        width: 100vw;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        .mainCustomized-formulario-title{
+            h1{
+                margin: -2rem;
+                font-size: 3rem;
+                font-weight: 900;
+            }
+        }
+        form{
+            margin-top: -2rem;
+            width: 100vh;
+            display: flex;
+            flex-direction: column;
+        div{
+            
+            font-size: 2rem;
+        }
+        }
+
+    }
+}
+}

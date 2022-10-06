@@ -1,0 +1,192 @@
+
+$color-primario:#F27405;
+$color-secundario: black;
+
+.principal {
+	width: 100vw;
+    height: 100vh;
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	grid-template-rows: repeat(7, auto) ; 
+	grid-template-areas: 
+	"header header header"
+    "marcas marcas marcas"
+    "moto1 moto2 moto3"
+    "moto4 moto5 moto6"
+    "nosotros text text"
+    "video video video"
+    "titulo contactos logo";
+}
+
+
+.header {
+    width: 100vw;
+    height: 100vh;
+    background: no-repeat;
+    background-image: url(./img_fotos/1.fondo_index_header.jpg);
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    nav{
+        margin-top: 3rem;
+        background-color: $color-primario;
+        opacity: 0.8;
+        li {
+            opacity: 0.6;
+            &:hover{
+                opacity: 1;
+            } 
+        }
+        a{
+            text-decoration: none;
+            font-size: 2.5rem;
+            font-weight: 900;  
+        }
+    }
+    h1{
+        color: $color-primario;
+        font-size: 10rem;
+        margin: 5rem 0rem 0rem 5rem;
+        font-weight: 900; 
+    }
+}
+
+.principal{
+    
+    .marcas { 
+        width: 100vw;
+        height: 20vh;
+        background-color:$color-secundario; 
+        grid-area: marcas;
+        display: flex;
+        align-items: center;
+        text-align: center;
+
+        h2{
+            width: 100%;
+            font-size: 5rem;
+            color: #F25C05;
+            text-align: center;
+            margin: 3rem;
+            font-weight: 900;
+        }
+    }
+
+        
+    .moto1, .moto2, .moto3, .moto4, .moto5, .moto6  { 
+        justify-self: center;
+        align-self: center;
+        img {
+            width: 15rem;
+            margin: 3rem;
+            &:hover{
+                opacity: 0.7;
+                border: solid$color-secundario 0.5rem;
+                border-radius: 1rem;
+                transform: scale(1.4,1.4);
+            } 
+        }
+    }
+
+    .moto1 { 
+        grid-area: moto1;
+    }
+
+    .moto2 { 
+        grid-area: moto2;
+    }
+
+    .moto3 { 
+        grid-area: moto3; 
+    }
+
+    .moto4 { 
+        grid-area: moto4;
+    }
+
+    .moto5 { 
+        grid-area: moto5;
+    }
+
+    .moto6 { 
+        grid-area: moto6; 
+    }
+
+    .nosotros{
+        height: 20vh;
+        grid-area: nosotros; 
+        background-color:$color-secundario;
+        display: flex;
+        align-items: center;
+        text-align: center;
+        h1{
+            width: 100%;
+            font-size: 5rem;
+            color: $color-primario;
+            font-weight: 900;
+          
+        }
+    }
+
+    .text { 
+        background-color: $color-primario;
+        grid-area: text;
+        height: 20vh;
+        display: flex;
+        align-items: center;
+        text-align: center;
+        font-size: 1.5rem;
+        p{
+            padding: 1rem;
+        }
+    }
+    
+    .video { 
+        grid-area: video;
+        height: 60vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .titulo { 
+        background-color: $color-primario;
+        grid-area: titulo;
+        height: 20vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        h2{
+            font-size: 5rem;
+            font-weight: 900;
+            color:$color-secundario;
+        }
+    }
+    
+    .contactos { 
+        grid-area: contactos;
+        background-color: $color-primario;
+        height: 20vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        font-size: 1.5rem;
+        line-height: 1.6; 
+    }
+
+    .logo { 
+        background-color: $color-primario;
+        grid-area: logo;
+        height: 20vh;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        img{ 
+            width: 8rem;
+            height: 8rem;
+            border: $color-primario solid 0.5rem;
+            border-radius: 2rem;
+        }
+    }
+}
