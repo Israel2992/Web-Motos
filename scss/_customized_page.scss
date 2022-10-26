@@ -19,7 +19,6 @@ $color-secundario: black;
 .header__Customized{
     grid-area: header__Customized;
     height: 30vh;
-    width: 100vw;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -39,8 +38,9 @@ $color-secundario: black;
     .header__Customized--text{
         width: 80vw;
         height: 20vh;
-        font-size: 2rem;
+        font-size: 2.1rem;
         color:  $color-primario;
+        padding: 0rem 3rem 0rem 0rem;
     }
 
 }

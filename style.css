@@ -13,13 +13,7 @@ html {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(7, auto);
-  grid-template-areas: "header header header"
- "marcas marcas marcas"
- "moto1 moto2 moto3"
- "moto4 moto5 moto6"
- "nosotros text text"
- "video video video"
- "titulo contactos logo"; }
+  grid-template-areas: "header header header" "marcas marcas marcas" "moto1 moto2 moto3" "moto4 moto5 moto6" "nosotros text text" "video video video" "titulo contactos logo"; }
 
 .header {
   width: 100vw;
@@ -113,9 +107,9 @@ html {
   display: flex;
   align-items: center;
   text-align: center;
-  font-size: 1.5rem; }
+  font-size: 2rem; }
   .principal .text p {
-    padding: 1rem; }
+    text-align: center; }
 
 .principal .video {
   grid-area: video;
@@ -166,13 +160,7 @@ html {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(7, auto);
-  grid-template-areas: "header__tienda header__tienda header__tienda"
- "cascos__title cascos__title cascos__title"
- "casco1 casco2 casco3"
- "chaquetas__title chaquetas__title chaquetas__title"
- "chaqueta1 chaqueta2 chaqueta3"
- "guantes_title guantes_title guantes_title"
- "guantes1 guantes2 guantes3"; }
+  grid-template-areas: "header__tienda header__tienda header__tienda" "cascos__title cascos__title cascos__title" "casco1 casco2 casco3" "chaquetas__title chaquetas__title chaquetas__title" "chaqueta1 chaqueta2 chaqueta3" "guantes_title guantes_title guantes_title" "guantes1 guantes2 guantes3"; }
 
 .header__nav__pages {
   background-color: #F27405; }
@@ -203,10 +191,11 @@ html {
       font-weight: 900;
       color: #F27405; }
   .header__tienda .header__tienda--texto {
-    width: 80vw;
+    width: 75vw;
     height: 20vh;
-    font-size: 2rem;
-    color: #F27405; }
+    font-size: 2.5rem;
+    color: #F27405;
+    padding: 0rem 3rem 0rem 0rem; }
 
 .title__tienda {
   height: 15vh;
@@ -277,13 +266,11 @@ html {
   grid-gap: 2.5rem;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(2, auto);
-  grid-template-areas: "header__Customized header__Customized"
- "main__Customized main__Customized "; }
+  grid-template-areas: "header__Customized header__Customized" "main__Customized main__Customized "; }
 
 .header__Customized {
   grid-area: header__Customized;
   height: 30vh;
-  width: 100vw;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -301,8 +288,9 @@ html {
   .header__Customized .header__Customized--text {
     width: 80vw;
     height: 20vh;
-    font-size: 2rem;
-    color: #F27405; }
+    font-size: 2.1rem;
+    color: #F27405;
+    padding: 0rem 3rem 0rem 0rem; }
 
 .main__Customized {
   grid-area: main__Customized;
@@ -348,16 +336,7 @@ html {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(10, auto);
-    grid-template-areas: "header header"
- "marcas marcas"
- "moto1 moto2" 
- "moto3 moto4"
- "moto5 moto6"
- "nosotros nosotros"
- "text text"
- "video video"
- "titulo titulo"
- "contactos logo"; }
+    grid-template-areas: "header header" "marcas marcas" "moto1 moto2"  "moto3 moto4" "moto5 moto6" "nosotros nosotros" "text text" "video video" "titulo titulo" "contactos logo"; }
   .header {
     grid-area: header;
     width: 100vw;
@@ -417,16 +396,7 @@ html {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(10, auto);
-    grid-template-areas: "header__tienda header__tienda"
- "cascos__title cascos__title "
- "casco1 casco2"
- "casco3 casco3"
- "chaquetas__title chaquetas__title "
- "chaqueta1 chaqueta2"
- "chaqueta3 chaqueta3"
- "guantes_title guantes_title"
- "guantes1 guantes2"
- "guantes3 guantes3"; }
+    grid-template-areas: "header__tienda header__tienda" "cascos__title cascos__title " "casco1 casco2" "casco3 casco3" "chaquetas__title chaquetas__title " "chaqueta1 chaqueta2" "chaqueta3 chaqueta3" "guantes_title guantes_title" "guantes1 guantes2" "guantes3 guantes3"; }
   .contenedor__tienda .header__tienda {
     height: 25vh;
     display: flex;
@@ -464,8 +434,7 @@ html {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
     grid-template-rows: repeat(2, auto);
-    grid-template-areas: "header__Customized"
- "main__Customized"; }
+    grid-template-areas: "header__Customized" "main__Customized"; }
   .header__Customized {
     height: 50vh;
     display: flex;
@@ -528,16 +497,7 @@ html {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(10, auto);
-    grid-template-areas: "header header"
- "marcas marcas"
- "moto1 moto2" 
- "moto3 moto4"
- "moto5 moto6"
- "nosotros nosotros"
- "text text"
- "video video"
- "titulo titulo"
- "contactos logo"; }
+    grid-template-areas: "header header" "marcas marcas" "moto1 moto2"  "moto3 moto4" "moto5 moto6" "nosotros nosotros" "text text" "video video" "titulo titulo" "contactos logo"; }
   .header {
     grid-area: header;
     width: 100vw;
@@ -597,19 +557,7 @@ html {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
     grid-template-rows: repeat(13, auto);
-    grid-template-areas: "header__tienda"
- "cascos__title"
- "casco1" 
- "casco2"
- "casco3" 
- "chaquetas__title"
- "chaqueta1" 
- "chaqueta2"
- "chaqueta3" 
- "guantes_title"
- "guantes1" 
- "guantes2"
- "guantes3"; }
+    grid-template-areas: "header__tienda" "cascos__title" "casco1"  "casco2" "casco3"  "chaquetas__title" "chaqueta1"  "chaqueta2" "chaqueta3"  "guantes_title" "guantes1"  "guantes2" "guantes3"; }
   .contenedor__tienda .header__tienda {
     height: 30vh;
     display: flex;
@@ -647,8 +595,7 @@ html {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
     grid-template-rows: repeat(2, auto);
-    grid-template-areas: "header__Customized"
- "main__Customized"; }
+    grid-template-areas: "header__Customized" "main__Customized"; }
   .header__Customized {
     height: 50vh;
     display: flex;
