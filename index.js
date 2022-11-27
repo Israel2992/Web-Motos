@@ -105,3 +105,100 @@ console.log(calculoEnvio(ubicacionSede,ubicacionEnvio,tarifaBasicaMedellin,tarif
 
 
 
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+/*--------------------------------------------------------------- LOG ING ---------------------------------------------------------------------*/
+
+// Simulacion del login de un usuario a la pagina, primero con una inscripccion y despues la validacion del usuario y contraseña
+
+//     - Contraseña debe de tener minimo 8 caracteres y tener numeros.
+//     - Usuario debe de tener un @, para validar que sea un email.
+
+
+
+let user = 'israel@gmail.com'                   // usuario de inscripcion
+let password = 'Holamundo1234'                          // contraseña de ingreso
+
+
+
+// SIMULACION DE LA INSCRIPCION DE UN NUEVO USUARIO, solo requiere email para el usuario y una contraseña.
+
+const validarInscripcion = (user,password) =>{
+
+    let detectarArroba = 0              
+    for ( let i = 0; i < user.length; i++){             // detecto si hay un @ 
+
+        if ( user[i].match(/[@]/)) {
+            detectarArroba = detectarArroba + 1      
+        }
+    }
+
+
+    let contadorPassword = 0
+    for ( let i = 0; i < password.length; i++){         // detecto la cantidad de caracteres de la password
+
+        contadorPassword = contadorPassword + 1
+    }
+
+
+    let detectorPassword = 0
+    for ( let i = 0; i < password.length; i++){         // dectecto si la password tiene numeros
+
+        if (password[i].match(/^[0-9]+$/)){
+            detectorPassword = detectorPassword + 1
+        }
+    }
+
+
+    if (detectarArroba > 0 && contadorPassword >= 8 && detectorPassword >0){
+        return `¡Inscripcion Exitosa!`
+    }
+    else if (detectarArroba <= 0 && contadorPassword >= 8 && detectorPassword >0){
+        return `Usuario inválido, debe de tener @, ingrese un nuevo email `
+    }
+    else if (detectarArroba > 0 && contadorPassword < 8 && detectorPassword >0){
+        return `Contraseña inválida, tiene menos de 8 caracteres.`
+    }
+    else if (detectarArroba > 0 && contadorPassword >= 8 && detectorPassword <= 0){
+        return `Contraseña inválida, no tines caracteres numericos`
+    }
+    else if (detectarArroba > 0 && contadorPassword < 8 && detectorPassword <=0){
+        return `Contraseña inválida, no tines caracteres alfanumericos y tiene menos de 8 caracteres`
+    }
+}
+console.log(validarInscripcion(user,password))
+
+
+
+
+// Para realizar el ingreso LOGIN con el usuario y contraseña de inscripcion
+
+const userEmail = 'israel@gmail.com'            // estos son los datos gurdados al momentos de hacer la inscripcion
+const userPassword = 'Holamundo1234'            
+
+
+
+const validarIngreso = (user,password) =>{
+
+    if (userEmail !== user && userPassword === password ){
+        return `Su usuario es incorrecto.`
+    }
+    else if (userEmail=== user && userPassword !== password){
+        return `Su contraseña es incorrecta`
+    }
+    else if (userEmail !== user && userPassword !== password){
+        return`Su usuario y contraseña con incorrectos`
+    }
+    else{
+        return alert('Bienvenidos')
+    }
+}
+
+console.log (validarIngreso(user, password))
+
+
+
+
+
+
+
