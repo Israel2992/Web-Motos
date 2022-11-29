@@ -1,8 +1,8 @@
 // La pagina web se desarrolla pensando en un Ecomerce enfocado en productos y servicios de mantenimineto o personalizacion de motocicletas, ademas de vender productos relacionados al mercado.
 
+
+
 // Voy a demostrar lógica para el control de inventario de productos como los cascos, chaquetas y guantes de motociclista
-
-
 
 // Esto para el caso de comprar un producto
 
@@ -28,7 +28,7 @@ console.log(ventaProducto(cantidadInventario,precioProducto,cantidadCompra))
 
 // Calculo de la compra total de los productos. 
 
-let precioProducto1 = 10000
+let precioProducto1 = 10000                 //suponiendo la compra de 4 productos se podria cambiar por una variable tipo lista
 let precioProducto2 = 50000
 let precioProducto3 = 10000
 let precioProducto4 = 90000
@@ -56,7 +56,7 @@ console.log(calcularTotal(cantidadCompra, precioProducto1, precioProducto2, prec
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-// Calculando el costos de envio
+// Calculando costos de envio
 
 
 const ubicacionSede = 'Medellin'            // ubicacion de la sede
